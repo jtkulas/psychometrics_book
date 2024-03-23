@@ -1,0 +1,55 @@
+# Introduction
+
+![](https://i.pinimg.com/originals/4c/09/e6/4c09e608d548b4abf525f3bb2b215c68.png)
+
+## Testing
+
+This is a book created from r markdown and executable code.
+
+See @knuth84 for additional discussion of literate programming.
+
+```{r}
+library(fontawesome)
+
+1 + 1
+```
+
+### Sub
+
+The script used to generate this document is called `temp.qmd` and is located within the repository linked in the upper-right hand corner (hit the `r fa("github")` symbol).  
+
+## Example
+
+This silliness itself was generated during a 3/15/24 [LiveStream on `r fa("youtube", fill="red")`](https://www.youtube.com/watch?v=7PSr2B_9zlA).
+
+Pretty picture as seen in @fig-heya
+
+```{r}
+#| fig-cap: "Bunch of jibberish"
+#| label: fig-heya
+#| warning: false
+#| message: false
+#| code-annotations: hover 
+
+
+library(psych) 
+library(plotly)
+
+data(bfi)                                        #<1>
+
+bfi$jibberish <- rowMeans(bfi[1:10], na.rm=TRUE)
+bfi$gobbleyjook <- rowMeans(bfi[11:20], na.rm=TRUE)
+
+plot_ly(bfi, x = ~jibberish, y = ~gobbleyjook, text = ~age, type = 'scatter', mode = 'markers', color=~gender,
+        marker = list(size = ~age, opacity = 0.5))
+```
+
+1. This calls out the data
+
+::: {.callout-tip}
+
+## Look for these
+
+When you see this, it means there is a tip
+:::
+

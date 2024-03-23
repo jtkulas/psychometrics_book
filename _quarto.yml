@@ -1,0 +1,27 @@
+project:
+  type: book
+
+book:
+  title: "book"
+  author: "Norah Jones"
+  cover-image: https://i.pinimg.com/originals/4c/09/e6/4c09e608d548b4abf525f3bb2b215c68.png
+  sharing:
+    - twitter
+  downloads: pdf
+  date: "3/19/2024"
+  navbar: 
+    logo: https://i.pinimg.com/originals/4c/09/e6/4c09e608d548b4abf525f3bb2b215c68.png
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - another.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cerulean
+  pdf:
+    documentclass: scrreprt

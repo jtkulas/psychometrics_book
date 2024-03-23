@@ -1,0 +1,11 @@
+# Another
+
+Different stuff here
+
+Testing out cross-chapter references (see @fig-heya)
+
+See @knuth84 for additional discussion of literate programming.
+
+```{r}
+1 + 1
+```
